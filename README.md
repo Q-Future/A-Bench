@@ -72,7 +72,7 @@ For *open-source* models, LLaVA-NeXT (Qwen-110B) takes the first place. For *clo
 **Performance on A-Bench-P1.**
 
 <div style="width: 100%; text-align: center; margin:auto;">
-  <img style="width:80%" src="part2.png">
+  <img style="width:60%" src="part2.png">
 </div>
 
 **Performance on A-Bench-P2.**
