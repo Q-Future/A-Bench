@@ -35,17 +35,23 @@
 <sup>*</sup>Equal contribution. <sup>#</sup>Corresponding author. 
    </div>
     
-
-
+  <div style="width: 80%; text-align: center; margin:auto;">
+      <img style="width:80%" src="spotlight.png">
+  </div>
+  
+<div align="left">
 The proposed A-Bench includes two parts to diagnose whether LMMs are masters at evaluating AIGIs: 1) Semantic Understanding, 2) Quality Perception
-
+ 
+ 
 ## Release
 - [3/1]  🔥 We are releasing **Co-instruct**, *Towards Open-ended Visual Quality Comparison* [here](https://co-instruct.github.io/). More details are coming soon.
 - [2/27] 🔥 Our work **Q-Insturct** has been accepted by CVPR 2024, try to learn the [details](https://github.com/Q-Future/Q-Instruct) about how to instruct MLLMs on low-level vision!
 - [2/23] 🔥 The low-level vision compare task part of [A-Bench+](https://arxiv.org/abs/2402.07116) is now released at [Huggingface](https://huggingface.co/datasets/q-future/A-Bench2)!
 - [2/10] 🔥 We are releasing the extended [A-Bench+](https://arxiv.org/abs/2402.07116), which challenges MLLMs with both single images and **image pairs** on low-level vision. The [LeaderBoard](https://huggingface.co/spaces/q-future/A-Bench-Leaderboard) is onsite, check out the low-level vision ability for your favorite MLLMs!! More details coming soon.
 - [1/16] 🔥 Our work ["A-Bench: A Benchmark for General-Purpose Foundation Models on Low-level Vision"](https://arxiv.org/abs/2309.14181) is accepted by **ICLR2024 as Spotlight Presentation**.
-  
+</div>
+
+
 ## Close-source MLLMs (GPT-4V-Turbo, Gemini, Qwen-VL-Plus, GPT-4V)
 
   <div style="width: 55%; text-align: center; margin:auto;">
