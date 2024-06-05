@@ -6,24 +6,29 @@
 <a href="https://github.com/Q-Future/"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fvqassessment%2FA-Bench&count_bg=%23E97EBA&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false"/></a>
     <a href="https://github.com/Q-Future/A-Bench"><img src="https://img.shields.io/github/stars/Q-Future/A-Bench"/></a>
     <a href="https://arxiv.org/abs/2309.14181"><img src="https://img.shields.io/badge/Arxiv-2309:14181-red"/></a>
-    <a href="https://github.com/Q-Future/A-Bench/releases/tag/v1.0.1.1014datarelease"><img src="https://img.shields.io/badge/Data-Release-green"></a>
+    <a href="https://huggingface.co/datasets/q-future/A-Bench"><img src="https://img.shields.io/badge/Data-Release-green"></a>
    </div>
 
-
+  <div style="width: 100%; text-align: center; margin:auto;">
+      <img style="width:100%" src="a-bench.png">
+  </div>
+  
   <h1>A-Bench: Are LMMs Masters at Evaluating AI-generated Images?</h1>
+  
+_What do we expect from LMMs as AIGI evaluators and how do they perform?_
 
   <div>
       <a href="https://zzc-1998.github.io/" target="_blank">Zicheng Zhang</a><sup>1</sup><sup>*</sup>,
       <a href="https://teowu.github.io/" target="_blank">Haoning Wu</a><sup>2</sup><sup>*</sup>,
       <a href="https://github.com/lcysyzxdxc" target="_blank">Chunyi Li</a><sup>1</sup><sup>*</sup>,
-      <a href="=" target="_blank">Yingjie Zhou</a><sup>1</sup>,
-      <a href="" target="_blank">Wei Sun</a><sup>1</sup>,
+      <a href="https://scholar.google.com/citations?hl=zh-CN&user=85yWgIcAAAAJ" target="_blank">Yingjie Zhou</a><sup>1</sup>,
+      <a href="https://scholar.google.com/citations?hl=zh-CN&user=nDlEBJ8AAAAJ" target="_blank">Wei Sun</a><sup>1</sup>,
   </div>
 
 <div>
-      <a href="" target="_blank">Xiongkuo Min</a><sup>1</sup>
-      <a href="" target="_blank">Zijian Chen</a><sup>1</sup>
-      <a href="" target="_blank">Xiaohong Liu</a><sup>1</sup>
+      <a href="https://minxiongkuo.github.io/" target="_blank">Xiongkuo Min</a><sup>1</sup>
+      <a href="https://scholar.google.com/citations?hl=zh-CN&user=NSR4UkMAAAAJ" target="_blank">Zijian Chen</a><sup>1</sup>
+      <a href="https://scholar.google.ca/citations?user=Tq2hoMQAAAAJ&hl=en" target="_blank">Xiaohong Liu</a><sup>1</sup>
       <a href="https://personal.ntu.edu.sg/wslin/Home.html" target="_blank">Weisi Lin</a><sup>2</sup>,
       <a href="https://ee.sjtu.edu.cn/en/FacultyDetail.aspx?id=24&infoid=153&flag=153" target="_blank">Guangtao Zhai</a><sup>1</sup><sup>#</sup>
       
@@ -50,13 +55,15 @@ Two key diagnostic subsets are defined: **A-Bench-P1** → high-level semantic u
 
 Specifically, a comprehensive dataset of 2,864 AIGIs sourced from various T2I models is compiled, including 1,408 AIGIs for **A-Bench-P1** and 1,456 for **A-Bench-P2**. Each AIGI is paired with a question-answer set annotated by human experts.
 
+We are open to **submission-based evaluation** for **A-Bench**. The details for submission are in the **Evaluate your model on A-Bench** Section.
+
   <div style="width: 100%; text-align: center; margin:auto;">
       <img style="width:100%" src="examples.png">
   </div>
 
   
-## A-Bench Performance
-For *open-source* models, LLaVA-NeXT (Qwen-110B) takes the first place. For *closed-source* models, GEMINI 1.5 PRO takes the first place.
+## Glance at A-Bench Performance
+For *open-source* models, **LLaVA-NeXT (Qwen-110B)** takes the first place. For *closed-source* models, **GEMINI 1.5 PRO** takes the first place.
 
 <div align="center">
 <div style="width: 100%; text-align: center; margin:auto;">
@@ -64,6 +71,31 @@ For *open-source* models, LLaVA-NeXT (Qwen-110B) takes the first place. For *clo
 </div>
     
 **A Quick Look of the A-Bench Outcomes.**
+
+
+|**Participant Name** | Major↑ | Minor↑ | Attr.↑ | N. Adj.↑ | Comp.↑ | Number↑ | Term↑ | Contra.↑ | Technical↑ | Aesthetic↑ | Generative↑ |
+| - | - | - | - | - | - | -| - | - | - | - | - |
+| Gemini 1.5 Pro | 93.80% | 95.17% | 94.33% | 80.31% | 72.11% | 79.31% | 73.00% | 61.76% | 70.97% | 77.56% | 59.02% |
+| GPT-4v | 92.97% | 95.97% | 87.43% | 82.63% | 64.44% | 68.78% | 77.58% | 66.71% | 67.68% | 68.22% | 57.11% |
+| GPT-4o | 94.33% | 95.16% | 91.96% | 79.59% | 76.34% | 73.33% | 77.53% | 68.57% | 70.53% | 61.65% | 67.89% |
+| Qwen-VL-Max | 92.57% | 94.77% | 91.97% | 85.76% | 68.97% | 75.78% | 78.94% | 65.14% | 70.47% | 69.46% | 58.37% |
+| Human (Worst) | 95.20% | 94.27% | 96.83% | 88.64% | 85.54% | 82.50% | 81.79% | 88.89% | 94.40% | 84.41% | 86.30% |
+| Human (Best) | **95.42%** | **95.18%** | **99.46%** | **95.12%** | **93.42%** | **91.67%** | **84.23%** | **96.00%** | **94.99%** | **86.12%** | **93.04%** |
+<div align="left">  
+    
+We release the performance of top-tier *closed-source* LMMs against humans.
+Two conclusions can be obtained: 
+    
+1) **LMMs excel at basic recognition tasks but tend to be less effective
+when it comes to nuanced semantic understanding.**
+
+2) **LMMs are poor quality evaluators.**
+
+
+
+## Detailed A-Bench Performance
+
+</div>
 
 <div style="width: 80%; text-align: center; margin:auto;">
   <img style="width:100%" src="part1.png">
