@@ -39,10 +39,10 @@ _What do we expect from LMMs as AIGI evaluators and how do they perform?_
 <div>
 <sup>*</sup>Equal contribution. <sup>#</sup>Corresponding author. 
    </div>
-  <a href="[https://arxiv.org/abs/2309.14181](https://github.com/Q-Future/A-Bench/blob/main/A_Bench__Are_LMMs_Masters_at_Evaluating_AI_generated_Images_.pdf)"><strong>Paper</strong></a> |
+  <a href="https://github.com/Q-Future/A-Bench/blob/main/A_Bench__Are_LMMs_Masters_at_Evaluating_AI_generated_Images_.pdf"><strong>Paper</strong></a> |
 <a href=""><strong>Project Page (Coming soon!)</strong></a> |
 <a href="https://github.com/Q-Future/A-Bench"><strong>Github</strong></a> |
- <a href="https://huggingface.co/datasets/q-future/A-Bench"><strong>Data</strong></a> |
+ <a href="https://huggingface.co/datasets/q-future/A-Bench"><strong>Data</strong></a> 
   <div style="width: 100%; text-align: center; margin:auto;">
       <img style="width:100%" src="spotlight.png">
   </div>
