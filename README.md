@@ -185,10 +185,12 @@ Please contact any of the first authors of this paper for queries.
 If you find our work interesting, please feel free to cite our paper:
 
 ```bibtex
-@inproceedings{zhang2024abench,
-    author = {Zhang, Zicheng and Wu, Haoning and Li, Chunyi and Zhou, Yingjie and Sun, Wei and Xiongkuo, Min and Chen, Zijian and Liu, Xiaohong and Lin, Weisi and Zhai, Guangtao},
-    title = {A-Bench: Are LMMs Masters at Evaluating AI-generated Images?},
-    booktitle = {Arxiv},
-    year = {2024}
+@misc{zhang2024abench,
+      title={A-Bench: Are LMMs Masters at Evaluating AI-generated Images?}, 
+      author={Zicheng Zhang and Haoning Wu and Chunyi Li and Yingjie Zhou and Wei Sun and Xiongkuo Min and Zijian Chen and Xiaohong Liu and Weisi Lin and Guangtao Zhai},
+      year={2024},
+      eprint={2406.03070},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
