@@ -14,7 +14,7 @@
   </div>
 
 <div style="width: 100%; text-align: center; margin:auto;">
-      <img style="width:100%" src="teaser.png">
+      <img style="width:100%" src="teaser.jpg">
   </div>
   
   <h1>A-Bench: Are LMMs Masters at Evaluating AI-generated Images?</h1>
