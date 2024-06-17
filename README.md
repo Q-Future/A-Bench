@@ -58,6 +58,7 @@ T2I models aim to create images that accurately align with the text and showcase
 
 
 ## Release
+- [2024/6/17]🔥 The **A-Bench** has now joined [lmm-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval), which makes it easier to test LMM !!
 - [2024/6/5] 🔥 We are releasing the **A-Bench** data and meta information at [Huggingface](https://huggingface.co/datasets/q-future/A-Bench).
 - [2024/6/3] 🔥 [Github repo](https://github.com/Q-Future/A-Bench) for **A-Bench** is online. Do you want to find out if your LMM is a master at evaluating AI-generated images? Come and test on **A-Bench** !!
 
