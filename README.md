@@ -213,6 +213,7 @@ The "img_path" indicates the path to the image in *imgs.zip*, the "question" is 
 
 The correct answers are kept confidential to ensure A-Bench retains its long-term value as a benchmark for assessing AIGI evaluation capabilities.
 
+###  Test without API
 To test with your LMM, we suggest using the following prompt:
 
 ```python
