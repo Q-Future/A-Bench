@@ -58,7 +58,7 @@ T2I models aim to create images that accurately align with the text and showcase
 
 
 ## Release
-- [2024/6/17]🔥 The **A-Bench** has now joined [lmm-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval), which makes it easier to test LMM !!
+- [2024/6/17]🔥 The **A-Bench** has now joined [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval), which makes it easier to test LMM !!
 - [2024/6/5] 🔥 We are releasing the **A-Bench** data and meta information at [Huggingface](https://huggingface.co/datasets/q-future/A-Bench).
 - [2024/6/3] 🔥 [Github repo](https://github.com/Q-Future/A-Bench) for **A-Bench** is online. Do you want to find out if your LMM is a master at evaluating AI-generated images? Come and test on **A-Bench** !!
 
@@ -128,6 +128,73 @@ when it comes to nuanced semantic understanding.**
 
 ## Evaluate your model on A-Bench
 
+
+### With LMMs-Eval
+
+
+Use [LMMs-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) to automatically evaluate A-Bench:
+
+```shell
+git clone https://github.com/EvolvingLMMs-Lab/lmms-eval.git
+cd lmms-eval
+pip install -e .
+
+export NUM_GPUS=8
+export MODEL_NAME=idefics2
+python3 -m accelerate.commands.launch --num_processes=$NUM_GPUS -m lmms_eval --model $MODEL_NAME --tasks abench_dev --batch_size 1 --log_samples --log_samples_suffix $MODEL_NAME_a_bench --output_path ./logs/
+```
+
+### With ```datasets``` API
+
+TO evaluate on your custom model, you can use our [converted dataset](https://huggingface.co/datasets/q-future/A-Bench-HF) in huggingface `datasets` format:
+
+```shell
+pip install datasets
+```
+
+```python
+from datasets import load_dataset
+
+ds = load_dataset("q-future/A-Bench-HF")
+ds["dev"][0]
+```
+
+Outputs should be as follows:
+```
+{'id': 0,
+ 'image': <PIL.PngImagePlugin.PngImageFile image mode=RGB size=512x288>,
+ 'question': 'May I ask where the scene in the picture is located?',
+ 'option0': 'Forest',
+ 'option1': 'Riverside',
+ 'option2': 'Desert',
+ 'option3': 'N/A',
+ 'category': 'part1 -> bag_of_words -> attribute',
+ 'correct_choice': 'B'}
+```
+
+Which can be then evaluated with your own model's format for MCQ.
+
+For example, if your model follows llava's format, it should be as follows:
+
+```python
+di = ds["dev"][0]
+prompt = di["question"] + "\n"
+for i in range(4):
+    if di[f"option{i}"] != "N/A":
+        prompt += chr(ord("A")+i) + ". " + di[f"option{i}"] + "\n"
+prompt = prompt + "Answer with the option's letter from the given choices directly."
+
+print(prompt)
+```
+
+The prompt for the previous data item should be ```May I ask where the scene in the picture is located?
+A. Forest
+B. Riverside
+C. Desert
+Answer with the option's letter from the given choices directly.```
+
+### Legacy
+
 First download the dataset and meta information from [Huggingface](https://huggingface.co/datasets/q-future/A-Bench).
 
 The *imgs.zip* contains all the AI-generated images and *Abench.json* contains all the meta information including the img_path, questions, answers, and categories. The item of *Abench.json* is structured like:
@@ -148,7 +215,7 @@ The correct answers are kept confidential to ensure A-Bench retains its long-ter
 
 To test with your LMM, we suggest using the following prompt:
 
-```
+```python
 import json
 with open("Abench.json", "r") as f:
     f = f.read()
