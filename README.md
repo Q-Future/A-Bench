@@ -58,6 +58,7 @@ T2I models aim to create images that accurately align with the text and showcase
 
 
 ## Release
+- [2024/8/1]🔥 The **A-Bench** is released on [VLMEvalKit](https://github.com/open-compass/VLMEvalKit), come and test your LMM with one command.
 - [2024/6/17]🔥 The **A-Bench** has now joined [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval), which makes it easier to test LMM !!
 - [2024/6/5] 🔥 We are releasing the **A-Bench** data and meta information at [Huggingface](https://huggingface.co/datasets/q-future/A-Bench).
 - [2024/6/3] 🔥 [Github repo](https://github.com/Q-Future/A-Bench) for **A-Bench** is online. Do you want to find out if your LMM is a master at evaluating AI-generated images? Come and test on **A-Bench** !!
@@ -143,6 +144,24 @@ export NUM_GPUS=8
 export MODEL_NAME=idefics2
 python3 -m accelerate.commands.launch --num_processes=$NUM_GPUS -m lmms_eval --model $MODEL_NAME --tasks abench_dev --batch_size 1 --log_samples --log_samples_suffix $MODEL_NAME_a_bench --output_path ./logs/
 ```
+
+### With VLMEvalKit
+
+Use [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) to automatically evaluate A-Bench:
+
+```
+git clone https://github.com/open-compass/VLMEvalKit.git
+cd VLMEvalKit
+pip install -e .
+```
+
+Example, quick test InternVL2-1B on the val and test sets of A-Bench:
+
+```
+python run.py --data A-Bench_VAL A-Bench_TEST --model InternVL2-1B --verbose
+```
+
+The val set has the correct answers and you can directly get the acc results. For test set performance, please submit the results to [e-mail](zzc1998@sjtu.edu.cn)
 
 ### With ```datasets``` API
 
