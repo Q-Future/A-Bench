@@ -58,6 +58,7 @@ T2I models aim to create images that accurately align with the text and showcase
 
 
 ## Release
+- [2024/9/26]🔥 Update the performance of LMMs on **A-Bench**.
 - [2024/8/1]🔥 The **A-Bench** is released on [VLMEvalKit](https://github.com/open-compass/VLMEvalKit), come and test your LMM with one command.
 - [2024/6/17]🔥 The **A-Bench** has now joined [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval), which makes it easier to test LMM !!
 - [2024/6/5] 🔥 We are releasing the **A-Bench** data and meta information at [Huggingface](https://huggingface.co/datasets/q-future/A-Bench).
