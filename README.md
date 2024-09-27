@@ -58,7 +58,7 @@ T2I models aim to create images that accurately align with the text and showcase
 
 
 ## Release
-- [2024/9/26]🔥 Update the performance of LMMs on **A-Bench**.
+- [2024/9/26]🔥 Update the performance of GPT \& Gemini with the latest version on **A-Bench**.
 - [2024/8/1]🔥 The **A-Bench** is released on [VLMEvalKit](https://github.com/open-compass/VLMEvalKit), come and test your LMM with one command.
 - [2024/6/17]🔥 The **A-Bench** has now joined [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval), which makes it easier to test LMM !!
 - [2024/6/5] 🔥 We are releasing the **A-Bench** data and meta information at [Huggingface](https://huggingface.co/datasets/q-future/A-Bench).
@@ -90,12 +90,12 @@ For *open-source* models, **LLaVA-NeXT (Qwen-110B)** takes the first place. For 
 
 |**Participant Name** | Major↑ | Minor↑ | Attr.↑ | N. Adj.↑ | Comp.↑ | Number↑ | Term↑ | Contra.↑ | Technical↑ | Aesthetic↑ | Generative↑ |
 | - | - | - | - | - | - | -| - | - | - | - | - |
-| Gemini 1.5 Pro | 93.80% | 95.17% | 94.33% | 80.31% | 72.11% | 79.31% | 73.00% | 61.76% | 70.97% | 77.56% | 59.02% |
-| GPT-4v | 92.97% | 95.97% | 87.43% | 82.63% | 64.44% | 68.78% | 77.58% | 66.71% | 67.68% | 68.22% | 57.11% |
-| GPT-4o | 94.33% | 95.16% | 91.96% | 79.59% | 76.34% | 73.33% | 77.53% | 68.57% | 70.53% | 61.65% | 67.89% |
-| Qwen-VL-Max | 92.57% | 94.77% | 91.97% | 85.76% | 68.97% | 75.78% | 78.94% | 65.14% | 70.47% | 69.46% | 58.37% |
-| Human (Worst) | 95.20% | 94.27% | 96.83% | 88.64% | 85.54% | 82.50% | 81.79% | 88.89% | 94.40% | 84.41% | 86.30% |
-| Human (Best) | **95.42%** | **95.18%** | **99.46%** | **95.12%** | **93.42%** | **91.67%** | **84.23%** | **96.00%** | **94.99%** | **86.12%** | **93.04%** |
+| Gemini 1.5 Pro | 93.82%   | 95.18%   | 94.35%   | 80.27%   | 72.14%   | 79.35%   | 72.88%   | 61.56%   | 84.70%   | 71.22%   | 77.61%   | 59.07%   | 69.12%   |
+| GPT-4v | 92.95%   | 96.00%   | 87.40%   | 82.67%   | 64.39%   | 68.84%   | 77.60%   | 66.73%   | 83.60%   | 67.82%   | 68.34%   | 58.02%   | 64.31%   |
+| GPT-4o | 94.34%   | 95.14%   | 91.99%   | 79.54%   | 76.40%   | 73.30%   | 77.47%   | 68.59%   | 85.44%   | 70.59%   | 61.61%   | 67.92%   | 66.88%   |
+| Qwen-VL-Max | 92.56%   | 94.75%   | 91.99%   | 85.78%   | 68.94%   | 75.85%   | 78.94%   | 65.05%   | 84.47%   |  71.31%     | 69.77%   | 58.56%  |  66.21%   |
+| Human (Worst) | 95.18%   | 94.24%   | 96.78%   | 88.70%   | 85.49%   | 82.46%   | 81.76%   | 88.91%   | 92.40%   | 94.32%   | 84.49%   | 86.25%   | 90.56%   |
+| Human (Best) | 95.40%   | 95.21%   | 99.42%   | 95.17%   | 93.34%   | 91.73%   | 84.29%   | 96.05%   | 94.02%   | 94.69%   | 86.01%   | 93.00%   | 92.22%   |
 <div align="left">  
     
 We release the performance of top-tier *closed-source* LMMs against humans.
@@ -105,27 +105,6 @@ Two conclusions can be obtained:
 when it comes to nuanced semantic understanding.**
 
 2) **LMMs are poor quality evaluators.**
-
-
-
-## Detailed A-Bench Performance
-
-</div>
-
-<div style="width: 80%; text-align: center; margin:auto;">
-  <img style="width:100%" src="part1.png">
-</div>
-
-**Performance on A-Bench-P1.**
-
-<div style="width: 100%; text-align: center; margin:auto;">
-  <img style="width:60%" src="part2.png">
-</div>
-
-**Performance on A-Bench-P2.**
-
-</div>
-
 
 
 ## Evaluate your model on A-Bench
