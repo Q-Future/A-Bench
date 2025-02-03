@@ -58,6 +58,7 @@ T2I models aim to create images that accurately align with the text and showcase
 
 
 ## Release
+- [2025/1] 🔥**A-Bench** is accepted by ICLR 2025, and more recent LMMs' performance is added.
 - [2024/9/26]🔥 Update the performance of GPT \& Gemini with the latest version on **A-Bench**.
 - [2024/8/1]🔥 The **A-Bench** is released on [VLMEvalKit](https://github.com/open-compass/VLMEvalKit), come and test your LMM with one command.
 - [2024/6/17]🔥 The **A-Bench** has now joined [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval), which makes it easier to test LMM !!
